@@ -1,4 +1,4 @@
-FROM devbzdocker03:5002/solita/centos-systemd:latest
+FROM solita/centos-systemd:latest
 MAINTAINER "Adam Belebczuk" <Adam@BelebczukConsulting.com>
 
 LABEL Description="This image is based on Solita's Centos7 w/ systemd image, and runs R Studio Server Pro 0.99 over port 8787. To run the container, use the run command: docker run --name rstudio-server -t -d --security-opt seccomp=unconfined --stop-signal=SIGRTMIN+3 --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8787:8787 sqldiablo/rstudio-server:0.99 To get to a shell prompt once the container is running, use the following command: docker exec -u 0 -it rstudio-server bash "
